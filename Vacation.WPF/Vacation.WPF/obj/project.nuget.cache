@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ralrQL7W4dNhhEEsBCcasCOjx4Sni8MO6uun8RqvAo5P2cdddRlJXuSx8CJErhHjxQ47FUyA2CxOxyuV0tNNWw==",
+  "success": true,
+  "projectFilePath": "C:\\Lazar\\Vacations\\Vacation.WPF\\Vacation.WPF\\Vacation.WPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LazarMarkovic\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
+    "C:\\Users\\LazarMarkovic\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\LazarMarkovic\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

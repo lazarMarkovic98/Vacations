@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "MT79R70MFpZ5k5ccFusXqchK8Il64BjiuFMZCntXbP2RfVdafDSXYDa74CbTuifemvf7zV1BCIs6Qo3X+6VYJw==",
+  "success": true,
+  "projectFilePath": "C:\\Lazar\\Vacation.WPF\\Vacation.WPF\\Vacation.WPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LazarMarkovic\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
+    "C:\\Users\\LazarMarkovic\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\LazarMarkovic\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\LazarMarkovic\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.0\\microsoft.netcore.app.runtime.win-x86.8.0.0.nupkg.sha512",
+    "C:\\Users\\LazarMarkovic\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.0\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.0.nupkg.sha512",
+    "C:\\Users\\LazarMarkovic\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.0\\microsoft.aspnetcore.app.runtime.win-x86.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
