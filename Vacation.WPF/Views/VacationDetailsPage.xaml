@@ -1,0 +1,125 @@
+﻿<Page x:Class="Vacation.WPF.Views.VacationDetailsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Vacation.WPF.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="VacationDetailsPage">
+
+    <Grid Background="#F5F5F5">
+
+        <Border Margin="20,70,20,20" 
+        Background="White"
+        BorderBrush="#CDCDCD" 
+        BorderThickness="1"
+        CornerRadius="10"
+        Padding="10">
+                <ListView Name="VacationsList" 
+                      ItemsSource="{Binding Vacations}" 
+                      BorderThickness="0">
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Padding" Value="5"/>
+                        <Setter Property="Margin" Value="2"/>
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="#DDDDDD"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#E3F2FD"/>
+                                <Setter Property="BorderBrush" Value="#4CAF50"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+                <ListView.View>
+                    <GridView>
+                        <!-- From Date Column -->
+                        <GridViewColumn Header="From date" Width="150px">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding StartDate, StringFormat=\{0:dd.MM.yyyy\}}" 
+                                               HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
+                        <!-- To Date Column -->
+                        <GridViewColumn Header="To date" Width="150px">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding EndDate, StringFormat=\{0:dd.MM.yyyy\}}" 
+                                        HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
+                        <!-- Number Of Working Column -->
+                        <GridViewColumn Header="Number of working days" Width="130px">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DurationInWorkingDays}" 
+                                               HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <!-- Delete Button Column -->
+                        <GridViewColumn Header="Delete" Width="110">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Delete" 
+                                             Command="{Binding DataContext.OpenDeleteVacationPopupCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                             CommandParameter="{Binding}"
+                                             HorizontalAlignment="Center" 
+                                             VerticalAlignment="Center"
+                                             Background="#F44336" 
+                                             Foreground="White" 
+                                             BorderBrush="Transparent" 
+                                             Padding="5,2" 
+                                             FontWeight="Bold"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <!-- Edit Button Column -->
+                        <GridViewColumn Header="Edit" Width="110">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Edit" 
+                                             Command="{Binding DataContext.NavigateToEditVacationPageCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                             CommandParameter="{Binding}"
+                                             HorizontalAlignment="Center" 
+                                             VerticalAlignment="Center"
+                                             Background="#4CAF50" 
+                                             Foreground="White" 
+                                             BorderBrush="Transparent" 
+                                             Padding="5,2" 
+                                             FontWeight="Bold"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
+
+        <!-- Vacation Summary Information -->
+        <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Vertical" Margin="20">
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Total Number of Vacation Days Used: " FontWeight="Bold" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding TakenVacationDays}" Margin="5,0,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Total Number of Remaining Vacation Days: " FontWeight="Bold" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding RemainingVacationDays}" Margin="5,0,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
